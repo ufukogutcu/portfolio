@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import MyNavbar from "./MyNavbar";
+import Navbar from "./Navbar";
 
 import MainPage from "./pages/MainPage";
 import TechStackPage from "./pages/TechStackPage";
@@ -10,11 +10,11 @@ function App() {
   const [page, setPage] = useState("Main");
   return (
     <>
-      <MyNavbar
+      <Navbar
         setPage={(page) => {
           setPage(page);
         }}
-      ></MyNavbar>
+      ></Navbar>
       {page === "Main" && <MainPage></MainPage>}
       {page === "TechStack" && <TechStackPage></TechStackPage>}
       {page === "Projects" && <ProjectsPage></ProjectsPage>}
