@@ -1,0 +1,7 @@
+:root {
+    --navbarbackground: #01040a;
+    --background: #0d1116;
+    --textcolor: white;
+
+    color: var(--textcolor);
+}

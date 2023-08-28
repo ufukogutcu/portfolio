@@ -1,7 +1,7 @@
 import "./MainPage.css";
 
 function MainPage() {
-  return <div>MainPage</div>;
+  return <div className="mainpage">MainPage</div>;
 }
 
 export default MainPage;
