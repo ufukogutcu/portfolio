@@ -13,15 +13,17 @@ function App() {
   const [page, setPage] = useState("Main");
   return (
     <>
-      <Navbar
-        setPage={(page) => {
-          setPage(page);
-        }}
-      ></Navbar>
       <Background></Background>
-      {page === "Main" && <MainPage></MainPage>}
-      {page === "TechStack" && <TechStackPage></TechStackPage>}
-      {page === "Projects" && <ProjectsPage></ProjectsPage>}
+      <a className="body">
+        <Navbar
+          setPage={(page) => {
+            setPage(page);
+          }}
+        ></Navbar>
+        {page === "Main" && <MainPage></MainPage>}
+        {page === "TechStack" && <TechStackPage></TechStackPage>}
+        {page === "Projects" && <ProjectsPage></ProjectsPage>}
+      </a>
     </>
   );
 }

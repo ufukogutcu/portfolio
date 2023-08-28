@@ -1,7 +1,17 @@
 :root {
     --navbarbackground: #01040a;
     --background: #0d1116;
+    --backgrounddots: #725a5a;
     --textcolor: white;
 
     color: var(--textcolor);
+}
+
+a.body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
 }
