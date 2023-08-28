@@ -10,6 +10,18 @@ interface Props {
 function Navbar({ setPage }: Props) {
   const [NavPage, setNavPage] = useState("Main");
 
+  const downloadCV = () => {
+    fetch("Ufuk Ogutcu CV.pdf").then((response) => {
+      response.blob().then((blob) => {
+        const fileURL = window.URL.createObjectURL(blob);
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "Ufuk Ogutcu CV.pdf";
+        alink.click();
+      });
+    });
+  };
+
   return (
     <ul className="navbar">
       <li className="left">
@@ -58,10 +70,23 @@ function Navbar({ setPage }: Props) {
       </li>
       <li className="right">
         <Tooltip content="Download my CV" closeDelay={30}>
-          <Link href="#">My CV</Link>
+          <Button
+            onClick={downloadCV}
+            as={Link}
+            color="primary"
+            href="#"
+            variant="flat"
+          >
+            Download CV
+          </Button>
         </Tooltip>
         <Tooltip content="ufukogutcu@gmail.com" closeDelay={30}>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button
+            as={Link}
+            color="primary"
+            href="mailto:ufukogutcu@gmail.com"
+            variant="flat"
+          >
             Email
           </Button>
         </Tooltip>
