@@ -9,12 +9,3 @@ div.navbar {
 
     background-color: var(--navbarbackground);
 }
-
-Tabs {
-    display: flex;
-    float: right;
-}
-
-@media screen and (max-width: 600px) {
-    
-}

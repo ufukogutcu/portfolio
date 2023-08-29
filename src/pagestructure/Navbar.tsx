@@ -1,5 +1,4 @@
-import { Link, Tabs, Tab } from "@nextui-org/react";
-import { useState } from "react";
+import { Tabs, Tab } from "@nextui-org/react";
 
 import "./Navbar.css";
 
@@ -19,7 +18,7 @@ function Navbar({ setPage }: Props) {
         }}
         defaultSelectedKey="Main"
       >
-        <Tab key="TechStack" title="TechStack" />
+        <Tab key="TechStack" title="Tech Stack" />
         <Tab key="Main" title="Me" />
         <Tab key="Projects" title="Projects" />
       </Tabs>

@@ -19,16 +19,16 @@ div.card {
 }
 
 .mainpage h1 {
-    font-size: 7vw;
+    font-size: calc(7*((1vw + 1vh)/2));
     font-weight: bold;
 }
 
 .mainpage h2 {
-    font-size: 3vw;
+    font-size: calc(3*((1vw + 1vh)/2));
 }
 
 .mainpage .logo {
-    width: 4vw;
+    width: calc(4*((1vw + 1vh)/2));
     display: inline-block;
 
     transition: 0.2s;
@@ -36,7 +36,7 @@ div.card {
 
 .mainpage a.linkgap {
     display: inline-block;
-    min-width: 1vw;
+    min-width: calc(1*((1vw + 1vh)/2));
     background-color: aqua;
 }
 
