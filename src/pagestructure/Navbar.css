@@ -42,16 +42,12 @@ ul.navbar {
     transform: translate(-50%, -50%);
 }
 
-.navbar li.right {
-    float: right;
-}
-
 .navbar li * {
     color:var(--textcolor);
 }
 
 @media screen and (max-width: 600px) {
-    .navbar li.left, .navbar li.right {
+    .navbar li.left {
       float: none;
       display: block;
     }

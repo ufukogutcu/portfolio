@@ -2,12 +2,11 @@
     --navbarbackground: #01040a;
     --background: #0d1116;
     --backgrounddots: #725a5a;
+    --cardbackground: #0d0c0c;
     --textcolor: white;
-
-    color: var(--textcolor);
 }
 
-a.body {
+span.body {
     position: absolute;
     top: 0;
     left: 0;

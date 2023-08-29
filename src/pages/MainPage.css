@@ -10,19 +10,46 @@ div.body {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: fit-content;
+    
+}
+
+div.card {
+    color: var(--textcolor);
+    text-align: center;
 }
 
 .mainpage h1 {
-    font-size: 100px;
-    font-weight: bolder;
-    text-align: center;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    font-size: 7vw;
+    font-weight: bold;
 }
 
 .mainpage h2 {
-    font-size: 50px;
-    text-align: center;
+    font-size: 3vw;
+}
+
+.mainpage .logo {
+    width: 4vw;
+    display: inline-block;
+
+    transition: 0.2s;
+}
+
+.mainpage a.linkgap {
+    display: inline-block;
+    min-width: 1vw;
+    background-color: aqua;
+}
+
+.mainpage .card a.link{
+
+    transition: 0.2s;
+}
+
+.mainpage .link:hover, .mainpage .logo:hover {
+    transform: translateY(-10%);
+}
+
+div.links {
+    margin-top: 2%;
+    display: inline-block;
 }
