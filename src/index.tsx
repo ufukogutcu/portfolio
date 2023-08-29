@@ -11,7 +11,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <NextUIProvider>
-      <App />
+      <main className="dark">
+        <App />
+      </main>
     </NextUIProvider>
   </React.StrictMode>
 );

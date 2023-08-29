@@ -1,61 +1,20 @@
-ul.navbar {
-    list-style-type: none;
-    background-color: var(--navbarbackground);
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
-.main {
-    font-size: x-large;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.side {
-    font-size: large;
-}
-
-.navbar li {
-    text-align: center;
-    white-space: nowrap;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 1%;
-    padding-right: 1%;
-}
-
-.navbar li * {
-    padding-left: 1%;
-    padding-right: 1%;
-}
-
-.navbar li.left {
-    float: left;
-}
-
-.navbar li.center {
+div.navbar {
     position: absolute;
-    top: 50%;
+    z-index: 1;
+
+    position: absolute;
+    top: 1.5vh;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translatex(-50%);
+
+    background-color: var(--navbarbackground);
 }
 
-.navbar li * {
-    color:var(--textcolor);
+Tabs {
+    display: flex;
+    float: right;
 }
 
 @media screen and (max-width: 600px) {
-    .navbar li.left {
-      float: none;
-      display: block;
-    }
-
-    .navbar li.center {
-        position: relative;
-        top: 0;
-        left: 0;
-        transform: none;
-    }
+    
 }

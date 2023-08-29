@@ -1,4 +1,4 @@
-import { Link, Button, Tooltip } from "@nextui-org/react";
+import { Link, Tabs, Tab } from "@nextui-org/react";
 import { useState } from "react";
 
 import "./Navbar.css";
@@ -8,55 +8,22 @@ interface Props {
 }
 
 function Navbar({ setPage }: Props) {
-  const [NavPage, setNavPage] = useState("Main");
-
   return (
-    <ul className="navbar">
-      <li className="left">
-        <p>Ufuk Ogutcu Logo</p>
-      </li>
-      <li className="center">
-        <Link
-          className="side"
-          underline={NavPage === "TechStack" ? "always" : "none"}
-          size="md"
-          href="#"
-          aria-current="page"
-          onClick={() => {
-            setPage("TechStack");
-            setNavPage("TechStack");
-          }}
-        >
-          Tech Stack
-        </Link>
-        <Link
-          className="main"
-          underline={NavPage === "Main" ? "always" : "none"}
-          size="lg"
-          href="#"
-          aria-current="page"
-          onClick={() => {
-            setPage("Main");
-            setNavPage("Main");
-          }}
-        >
-          Me
-        </Link>
-        <Link
-          className="side"
-          underline={NavPage === "Projects" ? "always" : "none"}
-          size="md"
-          href="#"
-          aria-current="page"
-          onClick={() => {
-            setPage("Projects");
-            setNavPage("Projects");
-          }}
-        >
-          Projects
-        </Link>
-      </li>
-    </ul>
+    <div className="navbar">
+      <Tabs
+        key="default"
+        radius="full"
+        size="lg"
+        onSelectionChange={(key) => {
+          setPage(key.toString());
+        }}
+        defaultSelectedKey="Main"
+      >
+        <Tab key="TechStack" title="TechStack" />
+        <Tab key="Main" title="Me" />
+        <Tab key="Projects" title="Projects" />
+      </Tabs>
+    </div>
   );
 }
 
