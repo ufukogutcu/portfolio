@@ -5,15 +5,14 @@ div.mainpage {
     overflow: hidden;
 }
 
-div.body {
+.mainpage div.body {
     position: relative;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
 }
 
-div.card {
+.mainpage div.card {
     color: var(--textcolor);
     text-align: center;
 }
@@ -49,12 +48,12 @@ div.card {
     transform: translateY(-10%);
 }
 
-div.links {
+.mainpage div.links {
     margin-top: 2%;
     display: inline-block;
 }
 
-img.alert {
+.mainpage img.alert {
     animation: shake 2s infinite linear;
 }
 

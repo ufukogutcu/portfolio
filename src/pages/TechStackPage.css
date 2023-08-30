@@ -1,0 +1,74 @@
+div.techstackpage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: var(--textcolor);
+}
+
+.techstackpage div.body {
+    position: relative;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*background-color: var(--backgrounddots);*/
+    width: 80vw;
+    height: 85vh;
+    padding: 2%;
+    border-radius: 16px;
+}
+
+.techstackpage div.tabs {
+    margin-bottom: 3%;
+}
+
+.techstackpage div.stack {
+    /*background-color: var(--background);*/
+    padding: 4%;
+    border-radius: 16px;
+    width: 90%;
+    height: 92%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0;
+    align-content: baseline;
+    overflow-x: auto;
+}
+
+.techstackpage div.skill {
+    flex: auto;
+    flex-basis: auto;
+    /*background-color: rgb(141, 33, 127);*/
+    height:fit-content;
+    width: fit-content;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.techstackpage img.logo {
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 60px;
+}
+
+.techstackpage .skill div.title {
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+
+.techstackpage .skill .title h1 {
+    font-size: 30px;
+}

@@ -6,7 +6,6 @@ import githublogo from "../static/github.png";
 import linkedinlogo from "../static/linkedin.png";
 import cvlogo from "../static/cv.png";
 import emaillogo from "../static/email.png";
-import { useState } from "react";
 
 interface Props {
   CVAlert: boolean;
