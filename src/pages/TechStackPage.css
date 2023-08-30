@@ -48,26 +48,15 @@ div.techstackpage {
     padding-top: 30px;
     padding-left: 50px;
     padding-right: 50px;
-}
-
-.techstackpage img.logo {
-    position: relative;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 60px;
-}
-
-.techstackpage .skill div.title {
-    position: relative;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
     text-align: center;
 }
 
+.techstackpage img.logo {
+    display: inline;
+    padding-bottom: 6px;
+
+    width: 60px;
+}
 
 .techstackpage .skill .title h1 {
     font-size: 30px;

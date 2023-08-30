@@ -15,9 +15,7 @@ function Stack({ skills }: StackProps) {
         <>
           <div className="skill">
             <img className="logo" src={skill[0]}></img>
-            <div className="title">
-              <h1>{skill[1]}</h1>
-            </div>
+            <h1>{skill[1]}</h1>
           </div>
         </>
       ))}

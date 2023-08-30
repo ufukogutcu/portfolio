@@ -6,7 +6,7 @@ export let frontend_skills = [
 ];
 
 export let backend_skills = [
-  [logo, "cc"],
+  [logo, "Flask"],
   [logo, "cc"],
   [logo, "cc"],
   [logo, "cc"],
