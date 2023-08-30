@@ -11,6 +11,8 @@ import "./App.css";
 
 function App() {
   const [page, setPage] = useState("Main");
+  const [CVAlert, setCVAlert] = useState(true);
+
   return (
     <>
       <Background />
@@ -20,7 +22,9 @@ function App() {
             setPage(page);
           }}
         />
-        {page === "Main" && <MainPage />}
+        {page === "Main" && (
+          <MainPage CVAlert={CVAlert} setCVAlert={setCVAlert} />
+        )}
         {page === "TechStack" && <TechStackPage />}
         {page === "Projects" && <ProjectsPage />}
       </span>

@@ -6,8 +6,14 @@ import githublogo from "../static/github.png";
 import linkedinlogo from "../static/linkedin.png";
 import cvlogo from "../static/cv.png";
 import emaillogo from "../static/email.png";
+import { useState } from "react";
 
-function MainPage() {
+interface Props {
+  CVAlert: boolean;
+  setCVAlert: (bool: boolean) => void;
+}
+
+function MainPage({ CVAlert, setCVAlert }: Props) {
   const downloadCV = () => {
     fetch("Ufuk Ogutcu CV.pdf").then((response) => {
       response.blob().then((blob) => {
@@ -63,8 +69,16 @@ function MainPage() {
               placement="bottom"
               closeDelay={30}
             >
-              <a className="link" onClick={downloadCV} href="#">
-                <img className="logo" src={cvlogo}></img>
+              <a
+                className="link"
+                onClick={downloadCV}
+                onMouseEnter={() => setCVAlert(false)}
+                href="#"
+              >
+                <img
+                  className={CVAlert ? "logo alert" : "logo"}
+                  src={cvlogo}
+                ></img>
               </a>
             </Tooltip>
             <a className="linkgap"></a>

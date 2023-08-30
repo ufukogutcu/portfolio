@@ -53,3 +53,22 @@ div.links {
     margin-top: 2%;
     display: inline-block;
 }
+
+img.alert {
+    animation: shake 2s infinite linear;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    5% { transform: rotate(0deg); }
+    10% { transform: rotate(-10deg); }
+    15% { transform: rotate(10deg); }
+    20% { transform: rotate(-10deg); }
+    25% { transform: rotate(10deg); }
+    30% { transform: rotate(-10deg); }
+    35% { transform: rotate(10deg); }
+    40% { transform: rotate(0deg); }
+    40% { transform: rotate(0deg); }
+    50% { transform: rotate(0deg); }
+    100% {}
+  }
