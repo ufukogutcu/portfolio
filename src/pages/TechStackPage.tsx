@@ -12,12 +12,15 @@ function Stack({ skills }: StackProps) {
   return (
     <div className="stack">
       {skills.map((skill: any) => (
-        <>
-          <div className="skill">
-            <img className="logo" src={skill[0]} alt={skill[1]}></img>
-            <h1>{skill[1]}</h1>
-          </div>
-        </>
+        <div key={skill[0] + "div"} className="skill">
+          <img
+            key={skill[0] + "img"}
+            className="logo"
+            src={skill[0]}
+            alt={skill[1]}
+          ></img>
+          <h1 key={skill[0] + "h1"}>{skill[1]}</h1>
+        </div>
       ))}
     </div>
   );
