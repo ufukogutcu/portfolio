@@ -14,7 +14,7 @@ function Stack({ skills }: StackProps) {
       {skills.map((skill: any) => (
         <>
           <div className="skill">
-            <img className="logo" src={skill[0]}></img>
+            <img className="logo" src={skill[0]} alt={skill[1]}></img>
             <h1>{skill[1]}</h1>
           </div>
         </>

@@ -7,7 +7,7 @@ div.mainpage {
 
 .mainpage div.body {
     position: relative;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -33,13 +33,9 @@ div.mainpage {
     transition: 0.2s;
 }
 
-.mainpage a.linkgap {
-    display: inline-block;
-    min-width: calc(1*((1vw + 1vh)/2));
-    background-color: aqua;
-}
-
 .mainpage .card a.link{
+    margin-left: calc(0.8*((1vw + 1vh)/2));
+    margin-right: calc(0.8*((1vw + 1vh)/2));
 
     transition: 0.2s;
 }

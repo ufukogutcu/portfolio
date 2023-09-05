@@ -7,12 +7,24 @@ import linkedinlogo from "../static/linkedin.png";
 import cvlogo from "../static/cv.png";
 import emaillogo from "../static/email.png";
 
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
+
 interface Props {
   CVAlert: boolean;
   setCVAlert: (bool: boolean) => void;
 }
 
 function MainPage({ CVAlert, setCVAlert }: Props) {
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
   const downloadCV = () => {
     fetch("Ufuk Ogutcu CV.pdf").then((response) => {
       response.blob().then((blob) => {
@@ -42,11 +54,11 @@ function MainPage({ CVAlert, setCVAlert }: Props) {
                 className="link"
                 href="https://www.linkedin.com/in/ufukogutcu/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                <img className="logo" src={linkedinlogo}></img>
+                <img className="logo" src={linkedinlogo} alt="Linkedin"></img>
               </a>
             </Tooltip>
-            <a className="linkgap"></a>
             <Tooltip
               content="GitHub"
               color="foreground"
@@ -57,11 +69,11 @@ function MainPage({ CVAlert, setCVAlert }: Props) {
                 className="link"
                 href="https://github.com/ufukogutcu"
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                <img className="logo" src={githublogo}></img>
+                <img className="logo" src={githublogo} alt="GitHub"></img>
               </a>
             </Tooltip>
-            <a className="linkgap"></a>
             <Tooltip
               content="CV"
               color="foreground"
@@ -77,10 +89,10 @@ function MainPage({ CVAlert, setCVAlert }: Props) {
                 <img
                   className={CVAlert ? "logo alert" : "logo"}
                   src={cvlogo}
+                  alt="CV"
                 ></img>
               </a>
             </Tooltip>
-            <a className="linkgap"></a>
             <Tooltip
               content="Email"
               color="foreground"
@@ -88,7 +100,7 @@ function MainPage({ CVAlert, setCVAlert }: Props) {
               closeDelay={30}
             >
               <a className="link" href="mailto:ufukogutcu@gmail.com">
-                <img className="logo" src={emaillogo}></img>
+                <img className="logo" src={emaillogo} alt="Email"></img>
               </a>
             </Tooltip>
           </div>

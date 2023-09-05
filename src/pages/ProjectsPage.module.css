@@ -1,0 +1,30 @@
+div.projectspage {
+    position: absolute;
+    top: calc(3vh + 45px);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: var(--textcolor);
+}
+
+.projectspage div.projects {
+    position: relative;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 80%;
+}
+
+.base {
+    position: fixed;
+    left: 50%;
+    transform: translatex(-50%);
+    top: 100px;
+    text-align: center;
+}
+
+.wrapper {
+    flex-direction: row;
+    justify-content: center;
+}
