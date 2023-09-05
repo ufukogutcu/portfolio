@@ -1,30 +1,25 @@
-div.projectspage {
-    position: absolute;
-    top: calc(3vh + 45px);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    color: var(--textcolor);
-}
-
-.projectspage div.projects {
-    position: relative;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 80%;
-}
-
 .base {
-    position: fixed;
+    position: relative;
     left: 50%;
     transform: translatex(-50%);
     top: 100px;
     text-align: center;
+    padding-bottom: 160px;
 }
 
 .wrapper {
     flex-direction: row;
     justify-content: center;
+}
+
+.projects {
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    width: 80%;
+    height: calc(100% - 300px);
+    overflow-x: auto;
+    color: var(--textcolor);
+
+    
 }

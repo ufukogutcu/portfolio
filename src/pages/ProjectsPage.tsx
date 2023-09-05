@@ -15,25 +15,28 @@ interface projectProps {
 }
 
 function Project({ name, link, image, description, skills }: projectProps) {
-  return (
-    <div className={styles.project}>
-      <h1>{name}</h1>
-      <img src={image} alt={name}></img>
-      <p>{description}</p>
-    </div>
-  );
+  return <img src={image} alt={name}></img>;
 }
 
 function ProjectsPage() {
-  const [filters, setFilters] = useState([""]);
+  const [projectsList, setProjectList] = useState(projects);
 
   return (
-    <div className={styles.projectspage}>
+    <>
       <CheckboxGroup
         label="Used Tech:"
         color="secondary"
-        value={filters}
-        onValueChange={setFilters}
+        onValueChange={(filter) => {
+          if (filter.length === 0) {
+            setProjectList(projects);
+          } else {
+            setProjectList(
+              projects.filter((project) => {
+                return filter.every((elem) => project.skills.includes(elem));
+              })
+            );
+          }
+        }}
         classNames={{
           base: styles.base,
           wrapper: styles.wrapper,
@@ -45,7 +48,19 @@ function ProjectsPage() {
           </Checkbox>
         ))}
       </CheckboxGroup>
-    </div>
+      <div className={`${styles.projects}`}>
+        {projectsList.map((project: any) => (
+          <Project
+            key={project.name}
+            name={project.name}
+            link={project.link}
+            image={project.image}
+            description={project.description}
+            skills={project.skills}
+          />
+        ))}
+      </div>
+    </>
   );
 }
 
