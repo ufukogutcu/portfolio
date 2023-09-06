@@ -28,14 +28,23 @@ export let skills = {
 export let projects = [
   {
     name: "Portfolio",
-    link: "aaa.com",
+    link: "https://portfolio.ufukogutcu.com",
+    github: "https://github.com/ufukogutcu/portfolio",
     image: portfolio,
-    description: "aaaaaaaaaaaaaaaaaa",
+    description: (
+      <>
+        <p>This is the portfolio that you are currently viewing.</p>
+        <br></br>
+        <p>Fun fact:</p>
+        <p> All the logos in this website were hand-drawn by me.</p>
+      </>
+    ),
     skills: ["react", "javascript", "typescript"],
   },
   {
-    name: "bbb",
+    name: "bbb no github",
     link: "bbb.com",
+    github: "",
     image: google,
     description: "bbbbbbbbbbbbbbbbbb",
     skills: ["flask"],
@@ -43,6 +52,7 @@ export let projects = [
   {
     name: "ccc",
     link: "ccc.com",
+    github: "gitc.com",
     image: portfolio,
     description: "cccccccccccccccccc",
     skills: ["flask"],
@@ -50,8 +60,17 @@ export let projects = [
   {
     name: "ddd",
     link: "ddd.com",
+    github: "gitd.com",
     image: google,
     description: "ddddddddddddddddddd",
+    skills: ["flask"],
+  },
+  {
+    name: "eee",
+    link: "eee.com",
+    github: "gite.com",
+    image: google,
+    description: "eeeeeeeeeeeeeeeee",
     skills: ["flask"],
   },
 ];

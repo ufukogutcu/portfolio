@@ -1,13 +1,14 @@
-.base {
+.filter {
     position: relative;
     left: 50%;
     transform: translatex(-50%);
-    top: 100px;
+    top: 90px;
     text-align: center;
     padding-bottom: 160px;
+    padding-top: 1%;
 }
 
-.wrapper {
+.filterwrapper {
     flex-direction: row;
     justify-content: center;
 }
@@ -18,8 +19,45 @@
     transform: translatex(-50%);
     width: 80%;
     height: calc(100% - 300px);
-    overflow-x: auto;
+    overflow-y: auto;
     color: var(--textcolor);
+    padding-top: 1%;
 
-    
+    display: flex;
+    flex-flow: row wrap;
+    gap: 7%;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.project {
+    align-items: center;
+    width: 25%;
+    height: fit-content;
+}
+
+.project:hover {
+    filter: grayscale(100%);
+    filter: blur(2px);
+}
+
+@media only screen and (max-width: 1100px) {
+    .project {
+      width: 40%
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .project {
+      width: 80%
+    }
+}
+
+.modal {
+    background-color: var(--modalbackground);
+    color: var(--textcolor);
+}
+
+.modalCloseButton:hover, .modalCloseButton:active {
+    background-color: transparent;
 }
