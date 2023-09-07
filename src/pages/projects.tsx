@@ -6,20 +6,25 @@ import javascript_logo from "../static/skills/javascript.png";
 import typescript_logo from "../static/skills/typescript.png";
 import flask_logo from "../static/skills/flask.png";
 
+let react = "react";
+let javascript = "javascript";
+let typescript = "typescript";
+let flask = "flask";
+
 export let skills = {
-  react: {
+  [react]: {
     name: "React",
     logo: react_logo,
   },
-  javascript: {
+  [javascript]: {
     name: "JavaScript",
     logo: javascript_logo,
   },
-  typescript: {
+  [typescript]: {
     name: "TypeScript",
     logo: typescript_logo,
   },
-  flask: {
+  [flask]: {
     name: "Flask",
     logo: flask_logo,
   },
@@ -33,13 +38,25 @@ export let projects = [
     image: portfolio,
     description: (
       <>
-        <p>This is the portfolio that you are currently viewing.</p>
-        <br></br>
-        <p>Fun fact:</p>
-        <p> All the logos in this website were hand-drawn by me.</p>
+        This is the portfolio that you are currently viewing.
+        <br />
+        <br />
+        Fun fact:
+        <br />
+        All the logos in this website were hand-drawn by me.
       </>
     ),
-    skills: ["react", "javascript", "typescript"],
+    skills: [
+      "react",
+      "javascript",
+      "typescript",
+      "react",
+      "javascript",
+      "typescript",
+      "react",
+      "javascript",
+      "typescript",
+    ],
   },
   {
     name: "bbb no github",
@@ -50,12 +67,12 @@ export let projects = [
     skills: ["flask"],
   },
   {
-    name: "ccc",
+    name: "ccc no skills",
     link: "ccc.com",
     github: "gitc.com",
     image: portfolio,
     description: "cccccccccccccccccc",
-    skills: ["flask"],
+    skills: [],
   },
   {
     name: "ddd",

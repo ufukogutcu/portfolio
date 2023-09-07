@@ -11,6 +11,8 @@ import {
   ModalFooter,
   Button,
   useDisclosure,
+  Tooltip,
+  ScrollShadow,
 } from "@nextui-org/react";
 
 import githubLogo from "../static/github.png";
@@ -53,14 +55,16 @@ function Project({
         <CardBody className="overflow-visible p-0">
           <img alt={name} src={image}></img>
         </CardBody>
-        <CardFooter className="text-small justify-center">
-          <b>{name}</b>
+        <CardFooter className="justify-center">
+          <b style={{ fontSize: "17px" }}>{name}</b>
         </CardFooter>
       </Card>
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
         placement="center"
+        backdrop="blur"
+        scrollBehavior="inside"
         classNames={{
           base: styles.modal,
           closeButton: styles.modalCloseButton,
@@ -72,20 +76,32 @@ function Project({
               <ModalHeader className="flex flex-row gap-1 items-center justify-center">
                 {name}
                 {github !== "" && (
-                  <a href={github} target="_blank" rel="noopener noreferrer">
-                    <img
-                      alt="github"
-                      src={githubLogo}
-                      style={{ height: "27px", width: "27px" }}
-                    ></img>
-                  </a>
+                  <Tooltip
+                    content="GitHub"
+                    color="foreground"
+                    placement="bottom"
+                    closeDelay={30}
+                  >
+                    <a href={github} target="_blank" rel="noopener noreferrer">
+                      <img
+                        alt="github"
+                        src={githubLogo}
+                        style={{ height: "27px", width: "27px" }}
+                      ></img>
+                    </a>
+                  </Tooltip>
                 )}
               </ModalHeader>
-              <ModalBody>{description}</ModalBody>
+              <ModalBody>
+                <p>{description}</p>
+                {skills.length !== 0 && (
+                  <>
+                    <br />
+                    <StackDisplay stack={skills} />
+                  </>
+                )}
+              </ModalBody>
               <ModalFooter>
-                <Button color="danger" variant="light" onPress={onClose}>
-                  Close
-                </Button>
                 <Button
                   color="primary"
                   onPress={() => {
@@ -99,6 +115,32 @@ function Project({
           )}
         </ModalContent>
       </Modal>
+    </>
+  );
+}
+
+interface StackDisplayProps {
+  stack: any;
+}
+function StackDisplay({ stack }: StackDisplayProps) {
+  stack = stack.map((skill: string) => {
+    return skills[skill];
+  });
+  return (
+    <>
+      <b>Stack:</b>
+      <ScrollShadow orientation="horizontal" className={styles.stack}>
+        {stack.map((skill: any) => (
+          <div key={skill.name} className={styles.skill}>
+            <img
+              alt={skill.name}
+              src={skill.logo}
+              style={{ width: "40px" }}
+            ></img>
+            {skill.name}
+          </div>
+        ))}
+      </ScrollShadow>
     </>
   );
 }
