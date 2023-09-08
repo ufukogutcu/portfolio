@@ -4,12 +4,18 @@ import google from "../static/projects/google.png";
 import react_logo from "../static/skills/react.png";
 import javascript_logo from "../static/skills/javascript.png";
 import typescript_logo from "../static/skills/typescript.png";
-import flask_logo from "../static/skills/flask.png";
+import html_logo from "../static/skills/html.png";
+import css_logo from "../static/skills/css.png";
+import tailwindcss_logo from "../static/skills/tailwindcss.png";
+import python_logo from "../static/skills/python.png";
 
 let react = "react";
 let javascript = "javascript";
 let typescript = "typescript";
-let flask = "flask";
+let html = "html";
+let css = "css";
+let tailwindcss = "tailwindcss";
+let python = "python";
 
 export let skills = {
   [react]: {
@@ -24,15 +30,27 @@ export let skills = {
     name: "TypeScript",
     logo: typescript_logo,
   },
-  [flask]: {
-    name: "Flask",
-    logo: flask_logo,
+  [html]: {
+    name: "HTML",
+    logo: html_logo,
+  },
+  [css]: {
+    name: "CSS",
+    logo: css_logo,
+  },
+  [tailwindcss]: {
+    name: "Tailwind CSS",
+    logo: tailwindcss_logo,
+  },
+  [python]: {
+    name: "Python",
+    logo: python_logo,
   },
 };
 
 export let projects = [
   {
-    name: "Portfolio",
+    name: "My Portfolio",
     link: "https://portfolio.ufukogutcu.com",
     github: "https://github.com/ufukogutcu/portfolio",
     image: portfolio,
@@ -46,48 +64,14 @@ export let projects = [
         All the logos in this website were hand-drawn by me.
       </>
     ),
-    skills: [
-      "react",
-      "javascript",
-      "typescript",
-      "react",
-      "javascript",
-      "typescript",
-      "react",
-      "javascript",
-      "typescript",
-    ],
+    skills: ["react", "javascript", "typescript", "html", "css", "tailwindcss"],
   },
   {
-    name: "bbb no github",
+    name: "Bitcoin Bruteforcer",
     link: "bbb.com",
-    github: "",
+    github: "https://github.com/ufukogutcu/btc-bruteforcer",
     image: google,
     description: "bbbbbbbbbbbbbbbbbb",
-    skills: ["flask"],
-  },
-  {
-    name: "ccc no skills",
-    link: "ccc.com",
-    github: "gitc.com",
-    image: portfolio,
-    description: "cccccccccccccccccc",
-    skills: [],
-  },
-  {
-    name: "ddd",
-    link: "ddd.com",
-    github: "gitd.com",
-    image: google,
-    description: "ddddddddddddddddddd",
-    skills: ["flask"],
-  },
-  {
-    name: "eee",
-    link: "eee.com",
-    github: "gite.com",
-    image: google,
-    description: "eeeeeeeeeeeeeeeee",
-    skills: ["flask"],
+    skills: ["python"],
   },
 ];
