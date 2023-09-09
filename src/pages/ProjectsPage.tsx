@@ -53,7 +53,11 @@ function Project({
         }}
       >
         <CardBody className="overflow-visible p-0">
-          <img alt={name} src={image}></img>
+          <img
+            alt={name}
+            src={image}
+            style={{ width: "100%", aspectRatio: "2" }}
+          ></img>
         </CardBody>
         <CardFooter className="justify-center">
           <b style={{ fontSize: "17px" }}>{name}</b>
