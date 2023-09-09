@@ -140,6 +140,10 @@ export let projects = [
         board. Sabotaging blocks one chosen block(9 little squares) of the
         enemies board for a few seconds, preventing them from seeing the numbers
         of that block.
+        <br />
+        <br />
+        The game is normally built for mobile platforms, but you can try out a
+        WebGL version by clicking visit.
       </>
     ),
     skills: ["unity", "cs"],
