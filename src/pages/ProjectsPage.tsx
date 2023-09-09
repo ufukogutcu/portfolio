@@ -151,7 +151,7 @@ function ProjectsPage() {
   return (
     <>
       <CheckboxGroup
-        label="Stack:"
+        label="Filter Stack:"
         color="secondary"
         onValueChange={(filter) => {
           if (filter.length === 0) {

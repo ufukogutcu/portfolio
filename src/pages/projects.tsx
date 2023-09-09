@@ -1,4 +1,5 @@
 import portfolio from "../static/projects/portfolio.png";
+import bitcoinbruteforcer from "../static/projects/bitcoinbruteforcer.png";
 import google from "../static/projects/google.png";
 
 import react_logo from "../static/skills/react.png";
@@ -64,14 +65,33 @@ export let projects = [
         All the logos in this website were hand-drawn by me.
       </>
     ),
-    skills: ["react", "javascript", "typescript", "html", "css", "tailwindcss"],
+    skills: ["react", "typescript", "html", "css", "tailwindcss"],
   },
   {
     name: "Bitcoin Bruteforcer",
-    link: "bbb.com",
+    link: "https://replit.com/@ufukogutcu/btc-bruteforcer#bruteforcer.py",
     github: "https://github.com/ufukogutcu/btc-bruteforcer",
-    image: google,
-    description: "bbbbbbbbbbbbbbbbbb",
+    image: bitcoinbruteforcer,
+    description: (
+      <>
+        Did you know that anytime you create a Bitcoin wallet, there is a 1 in
+        2^160 chance of getting one that is already being used?
+        <br />
+        <br />
+        This is a Bitcoin Bruteforcer application that can generate new bitcoin
+        addresses, check their balances and store them if they are not empty
+        using multiple threads.
+        <br />
+        <br />
+        The balance check is done using public APIs, since it is not very common
+        or cheap for anyone to run their own bitcoin node. The APIs are random
+        cycled to avoid call limits and cooldowns.
+        <br />
+        <br />
+        You can try it out online by pressing visit and clicking the green RUN
+        button on the opened Replit page.
+      </>
+    ),
     skills: ["python"],
   },
 ];

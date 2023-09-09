@@ -25,10 +25,10 @@ import java from "../static/skills/java.png";
 import c from "../static/skills/c.png";
 import cpp from "../static/skills/cpp.png";
 import cs from "../static/skills/cs.png";
-import solidity from "../static/skills/git.png";
-import haskell from "../static/skills/git.png";
-import unity from "../static/skills/git.png";
-import procreate from "../static/skills/git.png";
+import solidity from "../static/skills/solidity.png";
+import haskell from "../static/skills/haskell.png";
+import unity from "../static/skills/unity.png";
+import procreate from "../static/skills/procreate.png";
 
 export let frontend_skills = [
   [react, "React"],
