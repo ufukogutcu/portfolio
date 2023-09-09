@@ -88,6 +88,10 @@ export let projects = [
         cycled to avoid call limits and cooldowns.
         <br />
         <br />
+        This python project does not use any external modules. Meaning that
+        there are no requirements to run.
+        <br />
+        <br />
         You can try it out online by pressing visit and clicking the green RUN
         button on the opened Replit page.
       </>
