@@ -135,7 +135,7 @@ export let projects = [
         <br />
         VS with Sabotage:
         <br />
-        This is the same as the VS gamemode with a little addition. Players can
+        This is the same as the VS gamemode with a little twist. Players can
         spend 30 seconds of their remaining time to sabotage the other player's
         board. Sabotaging blocks one chosen block(9 little squares) of the
         enemies board for a few seconds, preventing them from seeing the numbers
