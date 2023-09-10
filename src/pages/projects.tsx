@@ -143,7 +143,7 @@ export let projects = [
         <br />
         <br />
         The game is normally built for mobile platforms, but you can try out a
-        WebGL version by clicking visit.
+        WebGL version by clicking visit. Beware that the WebGL version doesn't work that well with mobile.
       </>
     ),
     skills: ["unity", "cs"],
