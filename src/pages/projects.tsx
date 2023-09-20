@@ -1,7 +1,8 @@
 import portfolio from "../static/projects/portfolio.png";
+import smilemore from "../static/projects/smilemore.png";
+import backend from "../static/projects/backend.png";
 import bitcoinbruteforcer from "../static/projects/bitcoinbruteforcer.png";
 import multiplayersudoku from "../static/projects/multiplayersudoku.png";
-import google from "../static/projects/google.png";
 
 import react_logo from "../static/skills/react.png";
 import javascript_logo from "../static/skills/javascript.png";
@@ -10,6 +11,11 @@ import html_logo from "../static/skills/html.png";
 import css_logo from "../static/skills/css.png";
 import tailwindcss_logo from "../static/skills/tailwindcss.png";
 import python_logo from "../static/skills/python.png";
+import flask_logo from "../static/skills/flask.png";
+import celery_logo from "../static/skills/celery.png";
+import rabbitmq_logo from "../static/skills/rabbitmq.png";
+import sqlite_logo from "../static/skills/sqlite.png";
+import firebase_logo from "../static/skills/firebase.png";
 import unity_logo from "../static/skills/unity.png";
 import cs_logo from "../static/skills/cs.png";
 
@@ -20,6 +26,11 @@ let html = "html";
 let css = "css";
 let tailwindcss = "tailwindcss";
 let python = "python";
+let flask = "flask";
+let celery = "celery";
+let rabbitmq = "rabbitmq";
+let sqlite = "sqlite";
+let firebase = "firebase";
 let unity = "unity";
 let cs = "cs";
 export let skills = {
@@ -51,6 +62,26 @@ export let skills = {
     name: "Python",
     logo: python_logo,
   },
+  [flask]: {
+    name: "Flask",
+    logo: flask_logo,
+  },
+  [celery]: {
+    name: "Celery",
+    logo: celery_logo,
+  },
+  [rabbitmq]: {
+    name: "RabbitMQ",
+    logo: rabbitmq_logo,
+  },
+  [sqlite]: {
+    name: "SQLite",
+    logo: sqlite_logo,
+  },
+  [firebase]: {
+    name: "Firebase",
+    logo: firebase_logo,
+  },
   [unity]: {
     name: "Unity",
     logo: unity_logo,
@@ -80,6 +111,68 @@ export let projects = [
     skills: ["react", "typescript", "html", "css", "tailwindcss"],
   },
   {
+    name: "Smile More",
+    link: "https://smilemore.ufukogutcu.com/",
+    github: "https://github.com/ufukogutcu/smile-more",
+    image: smilemore,
+    description: (
+      <>
+        This is a PWA(Progressive Web App) smile directory.
+        <br />
+        <br />
+        It can be installed to both PCs and mobiles just by clicking install on
+        PC browsers and adding to home screen on mobile.
+        <br />
+        <br />
+        The user can upload daily selfies of them smiling, and see the pictures
+        listed in a calendar. It's basically a photo album with a nice
+        presentation, aiming to make people smile more by seeing themselves
+        smile.
+      </>
+    ),
+    skills: ["react", "javascript", "firebase", "html", "css"],
+  },
+  {
+    name: "U-Time (Backend)",
+    link: "",
+    github: "https://github.com/ufukogutcu/U-Time",
+    image: backend,
+    description: (
+      <>
+        This is the backend server of an online diary project.
+        <br />
+        <br />
+        The aim of the project is to create an app, where users can make daily
+        diary entries and get psychiatric suggestions based on their entries
+        using AI.
+        <br />
+        <br />
+        This backend server has all the implementations ready other than the
+        diary entry processing AI.
+        <br />
+        <br />
+        By using the endpoints:
+        <ul>
+          <li>/api/auth/login (POST)</li>
+          <li>/api/auth/register (POST)</li>
+          <li>/api/auth/profile (GET)</li>
+          <li>/api/auth/profile (PUT)</li>
+          <li>/api/auth/logout (POST)</li>
+          <li>/api/diary/(diary id) (GET)</li>
+          <li>/api/diary (GET)</li>
+          <li>/api/diary (POST)</li>
+          <li>/api/stats (GET)</li>
+          <br />A user can register, login, logout using their email and
+          password with the help of an auth token.
+          <br />
+          They can also make diary entries, get their all entries and edit their
+          entries.
+        </ul>
+      </>
+    ),
+    skills: ["python", "flask", "celery", "rabbitmq", "sqlite"],
+  },
+  {
     name: "Bitcoin Bruteforcer",
     link: "https://replit.com/@ufukogutcu/btc-bruteforcer#bruteforcer.py",
     github: "https://github.com/ufukogutcu/btc-bruteforcer",
@@ -90,7 +183,7 @@ export let projects = [
         2^160 chance of getting one that is already being used?
         <br />
         <br />
-        This is a Bitcoin Bruteforcer application that can generate new bitcoin
+        This is a Bitcoin Bruteforcer script that can generate new bitcoin
         addresses, check their balances and store them if they are not empty
         using multiple threads.
         <br />
@@ -123,12 +216,12 @@ export let projects = [
         <br />
         Co-op:
         <br />
-        Both players play the same sudoku board, trying to beat it together.
+        Both players play the same Sudoku board, trying to beat it together.
         <br />
         <br />
         VS:
         <br />
-        Each player play their own sudoku board, which are different boards with
+        Each player play their own Sudoku board, which are different boards with
         same difficulty levels. Players try to finish their board before the
         other player without getting three strikes and losing.
         <br />
@@ -143,7 +236,8 @@ export let projects = [
         <br />
         <br />
         The game is normally built for mobile platforms, but you can try out a
-        WebGL version by clicking visit. Beware that the WebGL version doesn't work that well with mobile.
+        WebGL version by clicking visit. Beware that the WebGL version doesn't
+        work that well with mobile.
       </>
     ),
     skills: ["unity", "cs"],

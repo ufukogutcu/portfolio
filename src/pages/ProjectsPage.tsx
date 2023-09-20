@@ -106,14 +106,16 @@ function Project({
                 )}
               </ModalBody>
               <ModalFooter>
-                <Button
-                  color="primary"
-                  onPress={() => {
-                    window.open(link, "_blank", "noreferrer");
-                  }}
-                >
-                  Visit
-                </Button>
+                {link !== "" && (
+                  <Button
+                    color="primary"
+                    onPress={() => {
+                      window.open(link, "_blank", "noreferrer");
+                    }}
+                  >
+                    Visit
+                  </Button>
+                )}
               </ModalFooter>
             </>
           )}

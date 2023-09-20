@@ -11,6 +11,7 @@ import tailwindcss from "../static/skills/tailwindcss.png";
 import python from "../static/skills/python.png";
 import django from "../static/skills/django.png";
 import flask from "../static/skills/flask.png";
+import firebase from "../static/skills/firebase.png";
 import sql from "../static/skills/sql.png";
 import postgresql from "../static/skills/postgresql.png";
 import sqlite from "../static/skills/sqlite.png";
@@ -43,6 +44,7 @@ export let backend_skills = [
   [python, "Python"],
   [django, "Django"],
   [flask, "Flask"],
+  [firebase, "Firebase"],
   [sql, "SQL"],
   [postgresql, "PostgreSQL"],
   [sqlite, "SQLite"],
