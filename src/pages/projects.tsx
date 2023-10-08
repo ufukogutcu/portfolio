@@ -128,6 +128,11 @@ export let projects = [
         listed in a calendar. It's basically a photo album with a nice
         presentation, aiming to make people smile more by seeing themselves
         smile.
+        <br />
+        <br />
+        Although it is implemented, login with Apple button currently does not
+        work. This is because Apple logins require Apple Developer program and
+        it is quite a bit expensive to enroll.
       </>
     ),
     skills: ["react", "javascript", "firebase", "html", "css"],
