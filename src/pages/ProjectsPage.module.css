@@ -6,11 +6,24 @@
     text-align: center;
     padding-bottom: 160px;
     padding-top: 1%;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .filterwrapper {
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .filterwrapper {
+        flex-flow: row nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        justify-content: flex-start;
+        padding-left: 10px;
+        padding-right: 10px;   
+    }
 }
 
 .projects {
