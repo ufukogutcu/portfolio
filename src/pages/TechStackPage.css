@@ -27,27 +27,23 @@ div.techstackpage {
 
 .techstackpage div.stack {
     /*background-color: var(--background);*/
-    padding: 4%;
+    padding-top: 65px;
     border-radius: 16px;
     width: 90%;
     height: 92%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0 0;
-    align-content: baseline;
-    overflow-x: auto;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 60px 100px;
+    overflow-y: auto;
 }
 
 .techstackpage div.skill {
-    flex: auto;
-    flex-basis: auto;
-    /*background-color: rgb(141, 33, 127);*/
+    flex-shrink: none;
+    flex-grow: none;
     height:fit-content;
-    width: fit-content;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
+    width: 100px;
     text-align: center;
 }
 
@@ -58,6 +54,24 @@ div.techstackpage {
     width: 60px;
 }
 
-.techstackpage .skill .title h1 {
-    font-size: 30px;
+.techstackpage .skill h1.title {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 770px) {
+    .techstackpage div.skill {
+      width: 30%
+    }
+
+    .techstackpage img.logo {
+        width: 60%;
+    }
+
+    .techstackpage .skill h1.title {
+        font-size: 80%;
+    }
+
+    .techstackpage div.stack {
+        gap: 6% 5%;
+    }
 }

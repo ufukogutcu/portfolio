@@ -19,7 +19,9 @@ function Stack({ skills }: StackProps) {
             src={skill[0]}
             alt={skill[1]}
           ></img>
-          <h1 key={skill[0] + "h1"}>{skill[1]}</h1>
+          <h1 key={skill[0] + "h1"} className="title">
+            {skill[1]}
+          </h1>
         </div>
       ))}
     </div>

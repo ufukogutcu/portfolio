@@ -250,7 +250,7 @@ export let projects = [
     image: livechat,
     description: (
       <>
-        This is a simple chat app made using sockets. Everyone can pick any
+        This is a simple chat app made using sockets. Anyone can pick any
         username they want to chat with others that are online. No chat logs are
         stored.
       </>
