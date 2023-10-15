@@ -13,11 +13,15 @@ import html_logo from "../static/skills/html.png";
 import css_logo from "../static/skills/css.png";
 import tailwindcss_logo from "../static/skills/tailwindcss.png";
 import python_logo from "../static/skills/python.png";
+import django_logo from "../static/skills/django.png";
 import flask_logo from "../static/skills/flask.png";
 import celery_logo from "../static/skills/celery.png";
 import rabbitmq_logo from "../static/skills/rabbitmq.png";
+import sql_logo from "../static/skills/sql.png";
 import sqlite_logo from "../static/skills/sqlite.png";
 import firebase_logo from "../static/skills/firebase.png";
+import docker_logo from "../static/skills/docker.png";
+import nginx_logo from "../static/skills/nginx.png";
 import gcp_logo from "../static/skills/gcp.png";
 import unity_logo from "../static/skills/unity.png";
 import cs_logo from "../static/skills/cs.png";
@@ -29,11 +33,15 @@ let html = "html";
 let css = "css";
 let tailwindcss = "tailwindcss";
 let python = "python";
+let django = "django";
 let flask = "flask";
 let celery = "celery";
 let rabbitmq = "rabbitmq";
+let sql = "sql";
 let sqlite = "sqlite";
 let firebase = "firebase";
+let docker = "docker";
+let nginx = "nginx";
 let gcp = "gcp";
 let unity = "unity";
 let cs = "cs";
@@ -66,6 +74,10 @@ export let skills = {
     name: "Python",
     logo: python_logo,
   },
+  [django]: {
+    name: "Django",
+    logo: django_logo,
+  },
   [flask]: {
     name: "Flask",
     logo: flask_logo,
@@ -78,6 +90,10 @@ export let skills = {
     name: "RabbitMQ",
     logo: rabbitmq_logo,
   },
+  [sql]: {
+    name: "SQL",
+    logo: sql_logo,
+  },
   [sqlite]: {
     name: "SQLite",
     logo: sqlite_logo,
@@ -85,6 +101,14 @@ export let skills = {
   [firebase]: {
     name: "Firebase",
     logo: firebase_logo,
+  },
+  [docker]: {
+    name: "Docker",
+    logo: docker_logo,
+  },
+  [nginx]: {
+    name: "Nginx",
+    logo: nginx_logo,
   },
   [gcp]: {
     name: "Google Cloud",
@@ -146,6 +170,40 @@ export let projects = [
     skills: ["react", "javascript", "firebase", "html", "css"],
   },
   {
+    name: "Shop (In Progress)",
+    link: "",
+    github: "https://github.com/ufukogutcu/shop",
+    image: backend,
+    description: (
+      <>
+        This project is still in progress!
+        <br></br>
+        <br></br>
+        This is a simple shop app. Although it is simple, it is built for
+        scalability and flexibility.
+        <br></br>
+        <br></br>
+        The backend is built on Django to easily adapt to complex requirements.
+        <br></br>
+        <br></br>
+        With frontend, backend and database deployed on the cloud, this can very
+        easily turn into the next Amazon.
+      </>
+    ),
+    skills: [
+      "react",
+      "javascript",
+      "django",
+      "python",
+      "docker",
+      "nginx",
+      "gcp",
+      "html",
+      "css",
+      "sql",
+    ],
+  },
+  {
     name: "U-Time (Backend)",
     link: "",
     github: "https://github.com/ufukogutcu/U-Time",
@@ -197,7 +255,7 @@ export let projects = [
         stored.
       </>
     ),
-    skills: ["python", "flask", "gcp"],
+    skills: ["python", "flask", "docker", "gcp"],
   },
   {
     name: "Bitcoin Bruteforcer",
