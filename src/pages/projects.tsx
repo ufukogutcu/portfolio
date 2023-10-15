@@ -1,8 +1,10 @@
 import portfolio from "../static/projects/portfolio.png";
 import smilemore from "../static/projects/smilemore.png";
-import backend from "../static/projects/backend.png";
+import livechat from "../static/projects/livechat.png";
 import bitcoinbruteforcer from "../static/projects/bitcoinbruteforcer.png";
 import multiplayersudoku from "../static/projects/multiplayersudoku.png";
+
+import backend from "../static/projects/backend.png";
 
 import react_logo from "../static/skills/react.png";
 import javascript_logo from "../static/skills/javascript.png";
@@ -16,6 +18,7 @@ import celery_logo from "../static/skills/celery.png";
 import rabbitmq_logo from "../static/skills/rabbitmq.png";
 import sqlite_logo from "../static/skills/sqlite.png";
 import firebase_logo from "../static/skills/firebase.png";
+import gcp_logo from "../static/skills/gcp.png";
 import unity_logo from "../static/skills/unity.png";
 import cs_logo from "../static/skills/cs.png";
 
@@ -31,6 +34,7 @@ let celery = "celery";
 let rabbitmq = "rabbitmq";
 let sqlite = "sqlite";
 let firebase = "firebase";
+let gcp = "gcp";
 let unity = "unity";
 let cs = "cs";
 export let skills = {
@@ -81,6 +85,10 @@ export let skills = {
   [firebase]: {
     name: "Firebase",
     logo: firebase_logo,
+  },
+  [gcp]: {
+    name: "Google Cloud",
+    logo: gcp_logo,
   },
   [unity]: {
     name: "Unity",
@@ -176,6 +184,20 @@ export let projects = [
       </>
     ),
     skills: ["python", "flask", "celery", "rabbitmq", "sqlite"],
+  },
+  {
+    name: "Live Chat",
+    link: "https://livechat.ufukogutcu.com",
+    github: "https://github.com/ufukogutcu/live-chat",
+    image: livechat,
+    description: (
+      <>
+        This is a simple chat app made using sockets. Everyone can pick any
+        username they want to chat with others that are online. No chat logs are
+        stored.
+      </>
+    ),
+    skills: ["python", "flask", "gcp"],
   },
   {
     name: "Bitcoin Bruteforcer",
