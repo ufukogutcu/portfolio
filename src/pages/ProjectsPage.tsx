@@ -156,31 +156,35 @@ function ProjectsPage() {
 
   return (
     <>
-      <CheckboxGroup
-        label="Filter Stack:"
-        color="secondary"
-        onValueChange={(filter) => {
-          if (filter.length === 0) {
-            setProjectList(projects);
-          } else {
-            setProjectList(
-              projects.filter((project) => {
-                return filter.every((elem) => project.skills.includes(elem));
-              })
-            );
-          }
-        }}
-        classNames={{
-          base: styles.filter,
-          wrapper: styles.filterwrapper,
-        }}
+      <ScrollShadow
+        orientation="horizontal"
+        className={styles.filterstackscroll}
       >
-        {Object.entries(skills).map(([skill, value]) => (
-          <Checkbox key={skill} value={skill}>
-            {value.name}
-          </Checkbox>
-        ))}
-      </CheckboxGroup>
+        <CheckboxGroup
+          color="secondary"
+          onValueChange={(filter) => {
+            if (filter.length === 0) {
+              setProjectList(projects);
+            } else {
+              setProjectList(
+                projects.filter((project) => {
+                  return filter.every((elem) => project.skills.includes(elem));
+                })
+              );
+            }
+          }}
+          classNames={{
+            base: styles.filter,
+            wrapper: styles.filterwrapper,
+          }}
+        >
+          {Object.entries(skills).map(([skill, value]) => (
+            <Checkbox key={skill} value={skill}>
+              {value.name}
+            </Checkbox>
+          ))}
+        </CheckboxGroup>
+      </ScrollShadow>
       <div className={`${styles.projects}`}>
         {projectsList.map((project: any) => (
           <Project
